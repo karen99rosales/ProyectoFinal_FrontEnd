@@ -1,0 +1,38 @@
+.Column
+{
+    display: flex;
+    flex-direction: column;
+}
+.Row
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.Product
+{
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    border-radius: 10%;
+}
+.btnColor
+{
+    background-color: #8cbc00;
+}
+
+.text-while
+{
+    color: white;
+}
+
+.text-20
+{
+    font-size: 20px ;
+}
+
+ 
+.colorBlue
+{
+    background-color: #037BC0;
+}
