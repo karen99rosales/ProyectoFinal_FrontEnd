@@ -1,29 +1,135 @@
-.Column
+.titleH1
+{
+    color: #037BC0;
+    text-align: center;
+    font-style: italic;
+}
+
+.titleH2
+{
+    color: #575757;
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* Contenedor del menú */
+.menu 
+{
+    background-color: #333;
+}
+
+/* Lista del menú */
+.menu ul 
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Menú horizontal */
+}
+
+/* Elementos del menú */
+.menu ul li 
+{
+    flex: 1; /* Distribuye el espacio */
+}
+
+/* Enlaces del menú */
+.menu ul li a 
+{
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+/* Efecto hover */
+.menu ul li a:hover
+{
+    background-color: #575757;
+}
+
+
+/*Contenedor imagen*/
+.DivImg
+{
+    height: 98vh; /*Altura de la imagen*/
+    width: 98.4vw; /*Ancho de la imagen*/
+            /*background-image: url('IMG/principal.jpg');  /*Se inserta la imagen, no se inserto en el div para tner mayor control*/
+    background-size: cover; /*Asegura que la imgen cubra todo el Div*/
+    background-position: center; 
+
+            /* EVITAR REPETICIÓN */
+    background-repeat: no-repeat;
+    padding: 0;
+}
+.DivImg2
+{
+    height: 50vh;
+    width: 65vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.DivImg3
+{
+    /*height: 15vh;*/
+    width: 30vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+/*Contenerdores Colums and rows*/
+.ContainerColum
 {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
 }
-.Row
+.ContainerRow
 {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 10px;
 }
 
-.Product
+.desingColum
 {
-    width: 400px;
-    height: 300px;
+    background-color: blueviolet;
+    border: medium solid white;
     text-align: center;
-    border-radius: 10%;
 }
+
+.desingRow
+{
+    background-color: #037BC0;
+    border-radius: 2%;
+    text-align: center;
+}
+.desingRowCategoria
+{
+    text-align: center;
+}
+
+/*Estilo del boton*/
 .btnColor
 {
     background-color: #8cbc00;
 }
-
 .text-while
 {
     color: white;
+}
+.text-Black
+{
+    color: black;
 }
 
 .text-20
@@ -31,8 +137,38 @@
     font-size: 20px ;
 }
 
- 
-.colorBlue
-{
-    background-color: #037BC0;
+/*Diseño del footer*/
+
+/* Contenedor de las 3 columnas */
+.footer-container {
+
+    display: flex;
+    justify-content: center; /* Centra las columnas en el medio de la pantalla */  
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: stretch;
+    justify-content: space-between; /* Distribuye las columnas equitativamente */
+    text-align: center; /* Centra el texto de los h3 y navs */
+}
+
+/* Estilo para cada columna */
+.footer-column {
+    flex: 1; /* Hace que todas las columnas midan lo mismo */
+    padding: 0 20px;
+}
+
+/* Títulos h3 */
+.footer-column h3 {
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* Navegación y enlaces */
+.footer-nav {
+    display: flex;
+    flex-direction: column; /* Alinea los enlaces uno debajo de otro */
+    gap: 5px; /* Espacio entre enlaces */
 }
