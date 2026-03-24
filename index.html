@@ -11,23 +11,84 @@
         <link rel="stylesheet" href="Style.css">
     </head>
 
-    <body>
+    <body class="container-fluid">
         <span >
             <h1 class="titleH1">Muebleria Rosales </h1>
         </span>
 
-        <nav class="menu">
-            <ul>
-                <li><a href="Inicio">Inicio</a></li>
-                <li><a href="Nosotros">Nosotros</a></li>
-                <li><a href="Tienda">Tienda</a></li>
-                <li><a href="Blog">Blog</a></li>
-                <li><a href="Galeria">Galeria</a></li>
-                <li><a href="Contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <!--Comienza mmenu con bootstrap-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Muebleria Rosales</a>
 
-        <div ><img class="DivImg" src="IMG/principal.jpg"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Tienda">Tienda</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Galeria">Galeria</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="Contacto">Contacto</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        <!--Comienza el carrusel de imagenes -->
+       
+        <div id="carrusel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" ></button>
+                <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2"></button>
+           
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="img/principal.jpg" class="d-block w-100 " alt="Paisaje1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="text-Black">Lo mejor en muebles</h3>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="img/Principal2.png" class="d-block w-100 " alt="Paisaje2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="text-Black">Calidad y servicios premiun</h3>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                    <img src="img/Principal3.png" class="d-block w-100 " alt="Paisaje3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 class="text-Black">Productos con la mejor calidad de materialesz</h3>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previo</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+
+        </div>
+
+        <!--Termina el carrusel de las imagenes-->
 
          <section class="ContainerColum ">
            <article class="titleH2"><h2>Nuestros productos</h2></article> 
@@ -37,87 +98,174 @@
                     <h2 class="text-while" >Producto 1</h2>
                     <p class="text-while text-20 colorBlue">Con la amplia variedad de plantillas de tarjetas gratis que te ofrecemos, puedes crear tu tarjeta perfecta para esa persona especial y decir desde «feliz cumpleaños» hasta «pienso en ti», sin gastar demasiado tiempo ni dinero.</p>
                     <h2 class="text-while">$12,000</h2>
-                    <button class="btnColor text-20 text-while">Agregar al carrito</button>
+                    
+                    <!--Formulario de compras con  modal-->
+                    
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mensaje">Agrega al carrito</button>
+                        <div class="modal fade" id="mensaje" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitulo">Cotiza compra</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <h4>Selecciona los complementos de la recamara</h4>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Buro">
+                                            <label class="form-check-label" for="Buro">Buros</label>
+                                        </li>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Closet">
+                                            <label class="form-check-label" for="Closet">Closet</label>
+                                        </li>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Colchon">
+                                            <label class="form-check-label" for="Colchon">Colchon</label>
+                                        </li>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Cabecera">
+                                            <label class="form-check-label" for="Cabecera">Cabecera</label>
+                                        </li>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Base">
+                                            <label class="form-check-label" for="Base">Base</label>
+                                        </li>
+
+                                        <h4>Selecciona el color del comedor</h4>
+                                        <ul class="list-group">
+                                            <li class="list-group-item text-start">
+                                                <input class="form-check-input me-1" type="Radio" name="colores" id="blanco">
+                                                <label class="form-check-label" for="blanco">blanco</label>
+                                            </li>
+                                            <li class="list-group-item text-start">
+                                                <input class="form-check-input me-1" type="Radio" name="colores" id="Cholocate">
+                                                <label class="form-check-label" for="Cholocate">Cholocate</label>
+                                            </li>
+                                             <li class="list-group-item text-start">
+                                                <input class="form-check-input me-1" type="Radio" name="colores" id="negro">
+                                                <label class="form-check-label" for="negro">Negro</label>
+                                            </li>
+                                        </ul>
+
+                                        <h4>Agregue su información para contactarlo</h4>
+                                        <div class="text-start">
+                                            <label  for="Nombre" id="Nombre">Nombre:</label>
+                                            <input type="text" id="Nombre" name="Nombre">
+                                            <br>
+                                            <label  for="Correo" id="Correo">Correo:  </label>
+                                            <input type="text" id="Correo" name="Correo">
+                                            <br>
+                                            <label  for="Telefono" id="Telefono">Telefono:</label>
+                                            <input type="text" id="Telefono" name="Telefono">
+                                            <br>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar </button>
+                                        <button type="button" class="btn btn-secondary">Cotiza compra</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Termina el formulario de compras -->
+                    </div>
+                   
                 </article>
             </section>
 
             <section class="ContainerRow">
                 <article class="desingRow">
-                    <div><img class="DivImg3" src="IMG/producto2.jpg"></div>
+                    <div><img class="rounded img-fluid" src="IMG/producto2.jpg"></div>
                     <h2 class="text-while" >Producto 1</h2>
                     <p class="text-while text-20 colorBlue">Con la amplia variedad de plantillas de tarjetas gratis que te ofrecemos, puedes crear tu tarjeta perfecta para esa persona especial y decir desde «feliz cumpleaños» hasta «pienso en ti», sin gastar demasiado tiempo ni dinero.</p>
                     <h2 class="text-while">$12,000</h2>
-                    <button class="btnColor text-20 text-while">Agregar al carrito</button>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-success" type="button">Cotiza compra</button>
+                    </div>
                 </article>
 
                 <article class="desingRow">
-                    <div><img class="DivImg3" src="IMG/producto3.jpg"></div>
+                    <div><img class="rounded img-fluid" src="IMG/producto3.jpg"></div>
                     <h2 class="text-while" >Producto 2</h2>
                     <p class="text-while text-20 colorBlue">Con la amplia variedad de plantillas de tarjetas gratis que te ofrecemos, puedes crear tu tarjeta perfecta para esa persona especial y decir desde «feliz cumpleaños» hasta «pienso en ti», sin gastar demasiado tiempo ni dinero.</p>
                     <h2 class="text-while">$12,000</h2>
-                    <button class="btnColor text-20 text-while">Agregar al carrito</button>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-success" type="button">Cotiza compra</button>
+                    </div>
                 </article>
 
                 <article class="desingRow">
-                    <div><img class="DivImg3" src="IMG/producto4.jpg"></div>
+                    <div><img class="rounded img-fluid" src="IMG/producto4.jpg"></div>
                     <h2 class="text-while" >Producto 3</h2>
                     <p class="text-while text-20 colorBlue">Con la amplia variedad de plantillas de tarjetas gratis que te ofrecemos, puedes crear tu tarjeta perfecta para esa persona especial y decir desde «feliz cumpleaños» hasta «pienso en ti», sin gastar demasiado tiempo ni dinero.</p>
                     <h2 class="text-while">$12,000</h2>
-                    <button class="btnColor text-20 text-while">Agregar al carrito</button>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-success" type="button">Cotiza compra</button>
+                    </div>
                 </article>
             </section>
 
             <article class="titleH2"><h2>Categoria de productos</h2></article>
             <section class="ContainerRow">
                 <article class="desingRowCategoria">
-                    <div><img class="DivImg3" src="IMG/categoria1.jpg"></div>
+                    <div><img class=" rounded img-fluid" src="IMG/categoria1.jpg"></div>
                     <h3 class="text-Black" >Oficina</h3>
                 </article>
 
                  <article class="desingRowCategoria">
-                    <div><img class="DivImg3" src="IMG/categoria2.jpg"></div>
+                    <div><img class=" rounded img-fluid" src="IMG/categoria2.jpg"></div>
                     <h3 class="text-Black" >Hogar</h3>
                 </article>
 
                  <article class="desingRowCategoria">
-                    <div><img class="DivImg3" src="IMG/categoria3.jpg"></div>
+                    <div><img class=" rounded img-fluid" src="IMG/categoria3.jpg"></div>
                     <h3 class="text-Black" >Cocina</h3>
                 </article>
             </section>
 
-            <section class=" footer-container">
-                <article class="footer-column">
-                    <h3 class="text-Black">Categorias</h3>
-                    <nav class="footer-nav">
-                        <a href="#">Cocina</a>
-                        <a href="#">oficina</a>
-                        <a href="#">Jardin</a>
-                        <a href="#">Cochera</a>
-                        <a href="#" >Dormitorios</a>
-                    </nav>
-                    
-                </article>
+            <!--Footer con bootstrap-->
+            <footer class="bg-dark py-5"> <div class="container">
+                    <section class="row text-center"> <article class="col-md-4 mb-4">
+                            <h3 class="h5 text-while fw-bold mb-3">Categorías</h3>
+                            <nav class="d-flex flex-column gap-2"> 
+                                <a href="#" class="text-decoration-underline text-secondary">Cocina</a>
+                                <a href="#" class="text-decoration-underline text-secondary">Oficina</a>
+                                <a href="#" class="text-decoration-underline text-secondary">Jardín</a>
+                                <a href="#" class="text-decoration-underline text-secondary">Cochera</a>
+                                <a href="#" class="text-decoration-underline text-secondary">Dormitorios</a>
+                            </nav>
+                        </article>
 
-                <article class="footer-column">
-                    <h3 class="text-Black">Sobre nosotros</h3>
-                    <nav class="footer-nav">
-                        <a href="#">Nuestra historia</a>
-                        <a href="#">Mision, Vision</a>
-                        <a href="#">aolitica de arivacidad</a>
-                        <a href="#">Terminos de servicios</a>
-                    </nav>
-                </article>
+                        <article class="col-md-4 mb-4">
+                            <h3 class="h5 text-while fw-bold mb-3">Sobre nosotros</h3>
+                            <nav class="d-flex flex-column gap-2">
+                                <a href="#" class="text-decoration-underline text-secondary">Nuestra historia</a>
+                                <a href="#" class="text-decoration-underline text-secondary">Misión, Visión</a>
+                                <a href="#" class="text-decoration-underline text-secondary">Política de privacidad</a>
+                                <a href="#" class="text-decoration-underline text-secondary">Términos de servicio</a>
+                            </nav>
+                        </article>
 
-                <article class=" footer-column">
-                    <h3 class="text-Black">Soporte</h3>
-                    <nav class="footer-nav">
-                        <a href="#">Preguntas frecuentes</a>
-                        <a href="#">Ayuda en linea</a>
-                        <a href="#">Confianza y seguridad</a>
-                    </nav>
-                </article>
-            </section>
+                        <article class="col-md-4 mb-4">
+                            <h3 class="h5 text-while fw-bold mb-3">Soporte</h3>
+                            <nav class="d-flex flex-column gap-2">
+                                <a href="#" class="text-decoration-underline text-secondary">Preguntas frecuentes</a>
+                                <a href="#" class="text-decoration-underline text-secondary">Ayuda en línea</a>
+                                <a href="#" class="text-decoration-underline text-secondary">Confianza y seguridad</a>
+                            </nav>
+                        </article>
+                        <p class="text-while fst-italic fs-6">Todos los derechos reservados</p>
+                    </section>
+                </div>
+            </footer>
 
+            <!--Fin de footer con bootstrap-->
         </section>
     </body>
 </html>

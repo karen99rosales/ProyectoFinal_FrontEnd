@@ -112,6 +112,7 @@
     background-color: #037BC0;
     border-radius: 2%;
     text-align: center;
+    justify-content: center; 
 }
 .desingRowCategoria
 {
