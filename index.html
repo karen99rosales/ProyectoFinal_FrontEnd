@@ -202,8 +202,81 @@
                     <h5 class="text-warning">🔥 ¡PROMOCIÓN DE LANZAMIENTO!</h5>
                     <p class="text-while text-20 colorBlue"> Si cierras tu pedido antes del domingo, te regalamos un set de organizadores ocultos para cajones y el envío a domicilio totalmente gratis (zona metropolitana).</p>
                     <h2 class="text-while">$12,000</h2>
+                    <!--Formulario de compras con  modal-->
+                    
                     <div class="d-grid gap-2 col-6 mx-auto">
-                        <button class="btn btn-success" type="button">Cotiza compra</button>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#mensaje">Agrega al carrito</button>
+                        <div class="modal fade" id="mensaje" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalTitulo">Cotiza compra</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <h4>Selecciona los complementos de la recamara</h4>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Buro">
+                                            <label class="form-check-label" for="Buro">Buros</label>
+                                        </li>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Closet">
+                                            <label class="form-check-label" for="Closet">Closet</label>
+                                        </li>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Colchon">
+                                            <label class="form-check-label" for="Colchon">Colchon</label>
+                                        </li>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Cabecera">
+                                            <label class="form-check-label" for="Cabecera">Cabecera</label>
+                                        </li>
+                                        <li class="list-group-item text-start">
+                                            <input class="form-check-input me-1" type="checkbox" id="Base">
+                                            <label class="form-check-label" for="Base">Base</label>
+                                        </li>
+
+                                        <h4>Selecciona el color del comedor</h4>
+                                        <ul class="list-group">
+                                            <li class="list-group-item text-start">
+                                                <input class="form-check-input me-1" type="Radio" name="colores" id="blanco">
+                                                <label class="form-check-label" for="blanco">blanco</label>
+                                            </li>
+                                            <li class="list-group-item text-start">
+                                                <input class="form-check-input me-1" type="Radio" name="colores" id="Cholocate">
+                                                <label class="form-check-label" for="Cholocate">Cholocate</label>
+                                            </li>
+                                             <li class="list-group-item text-start">
+                                                <input class="form-check-input me-1" type="Radio" name="colores" id="negro">
+                                                <label class="form-check-label" for="negro">Negro</label>
+                                            </li>
+                                        </ul>
+
+                                        <h4>Agregue su información para contactarlo</h4>
+                                        <div class="text-start">
+                                            <label  for="Nombre" id="Nombre">Nombre:</label>
+                                            <input type="text" id="Nombre" name="Nombre">
+                                            <br>
+                                            <label  for="Correo" id="Correo">Correo:  </label>
+                                            <input type="text" id="Correo" name="Correo">
+                                            <br>
+                                            <label  for="Telefono" id="Telefono">Telefono:</label>
+                                            <input type="text" id="Telefono" name="Telefono">
+                                            <br>
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar </button>
+                                        <button type="button" class="btn btn-secondary">Cotiza compra</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--Termina el formulario de compras -->
                     </div>
                 </article>
 
